@@ -1,4 +1,6 @@
-"""개수를 찾을 때는 dfs"""
+"""
+모든 경우를 따져 개수를 찾을 때는 dfs
+"""
 
 def solution(numbers, target):
     answer = 0
