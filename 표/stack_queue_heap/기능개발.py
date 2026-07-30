@@ -5,7 +5,7 @@
 progresses: 각 기능의 배포 순서대로 현재 진도를 담음
 speeds: 각 기능별 개발 속도
 
-Q. 배포 시점마다 몇 개 기능 배포? 
+Q. 배포 시점마다 몇 개 기능 배포?  
 """
 from collections import deque
 def solution(progresses, speeds):
