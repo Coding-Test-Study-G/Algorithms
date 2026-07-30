@@ -30,3 +30,16 @@ def solution(order):
             return answer
             
     return answer
+
+def solution2(order):
+    answer = 0
+    stack = [] # 보조 벨트
+    
+    for i in range(len(order)): # 보조 벨트에 box 순서대로 실어
+        stack.append(i+1)
+        
+        while stack and stack[-1] == order[answer]: # 보조 벨트에 있는 box가 타겟일 때만 동작
+            answer += 1
+            stack.pop()
+            
+    return answer
