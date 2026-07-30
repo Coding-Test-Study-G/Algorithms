@@ -13,4 +13,4 @@ def solution(prices):
             time += 1
         answer.append(time)
     
-    return answer
+    return answer 
