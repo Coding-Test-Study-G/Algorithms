@@ -3,7 +3,7 @@
 - 섞은 스코빌 지수 = 스코빌 지수 최솟값 + 두 번째 최솟값 * 2
 
 scoville: 음식들의 스코빌 지수
-K: 원하는 스코빌 지수
+K: 원하는 스코빌 지수 
 """
 
 from heapq import heapify, heappush, heappop
