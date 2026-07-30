@@ -3,7 +3,7 @@
 1 ~ n번 상자까지 오름차순으로 전달
 전달된 순서대로 확인 시작
 order에 맞지 않는 상자는 stack에 넣음
-stack에 넣은 후에 order에 맞게 실지 못하면 종료
+stack에 넣은 후에 order에 맞게 실지 못하면 종료 
 
 """
 
@@ -28,5 +28,18 @@ def solution(order):
         # 답 없으면    
         else: 
             return answer
+            
+    return answer
+
+def solution2(order):
+    answer = 0
+    stack = [] # 보조 벨트
+    
+    for i in range(len(order)): # 보조 벨트에 box 순서대로 실어
+        stack.append(i+1)
+        
+        while stack and stack[-1] == order[answer]: # 보조 벨트에 있는 box가 타겟일 때만 동작
+            answer += 1
+            stack.pop()
             
     return answer
