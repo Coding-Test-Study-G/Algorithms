@@ -5,6 +5,8 @@
 - routes[i][1]에는 i번째 차량이 고속도로에서 나간 지점
 
 목표: 최소 몇 대의 카메라를 설치해야 하는지를 return
+
+end만 파악하면 됨 (start 필요 x)
 """
 
 def solution(routes):
