@@ -1,26 +1,17 @@
 /*
 [접근]
 
-- 모든 경로를 탐색 → DFS
-- 현재 위치에서 아래 왼쪽 / 오른쪽으로 이동
-- 모든 경로의 합을 비교 → 최댓값
-- 같은 위치를 반복 방문 → 중복 계산 → 시간초과
+- 모든 경로를 탐색하면 중복 계산 발생 → DP
+- 아래 두 숫자 중 큰 값을 선택 → 최대 경로
+- 아래에서 위로 올라오며 각 위치의 최대값 갱신
 */
+
 function solution(triangle) {
-  var answer = 0;
-
-  function max_path(level, index, sum) {
-    if (level === triangle.length) {
-      answer = Math.max(answer, sum);
-      return;
+  for (let level = triangle.length - 2; level >= 0; level--) {
+    for (let index = 0; index <= level; index++) {
+      triangle[level][index] += Math.max(triangle[level + 1][index], triangle[level + 1][index + 1]);
     }
-
-    sum += triangle[level][index];
-
-    max_path(level + 1, index, sum);
-    max_path(level + 1, index + 1, sum);
   }
 
-  max_path(0, 0, 0);
-  return answer;
+  return triangle[0][0];
 }
