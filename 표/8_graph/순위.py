@@ -8,6 +8,8 @@ n명의 권투선수가 권투 대회에 참여, 권투 경기는 1대1 방식
 목표: 정확하게 순위를 매길 수 있는 선수의 수를 return
 
 ! A가 B에게 이기고 B가 C에게 이기면, A가 C에게 이김
+
+플로이드-워셜(Floyd-Warshall) 알고리즘
 """
 
 def solution(n, results):
